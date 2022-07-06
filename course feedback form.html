@@ -1,0 +1,245 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<style>    
+* {    
+  box-sizing: border-box;    
+}    
+    
+input[type=text], select, textarea {    
+  width: 50%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+input[type=email], select, textarea {    
+  width: 50%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+input[type=contact], select, textarea{    
+  width: 50%;  
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;  
+}
+input[type=country], select, textarea {    
+  width: 50;  
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;  
+}
+
+
+label {    
+  padding: 12px 12px 12px  0;    
+  display: inline-block;    
+}    
+    
+input[type=submit] {    
+  background-color: saddlebrown;    
+  color: white;    
+  padding: 12px 20px;    
+  border: none;    
+  border-radius: 4px;    
+  cursor: pointer;    
+  float:right;
+}    
+input[type=button] {    
+  background-color: saddlebrown;      
+  color: white;    
+  padding: 12px 20px;    
+  border: none;    
+  border-radius: 4px;    
+  cursor: pointer;    
+  float: right; 
+  width: 5%;   
+}    
+input[type=submit]:hover {    
+  background-color: #45a049;    
+}    
+    
+input[type=button]:hover {    
+  background-color: #45a049;
+ flex-direction: row;   
+}   
+
+.container {    
+  border-radius: 5px;        
+  padding: 20px;    
+}    
+    
+.col-25 {    
+  float: left;    
+  width: 10%;    
+  margin-top: 6px;    
+}    
+    
+.col-75 {    
+  float: left;    
+  width: 75%;    
+  margin-top: 6px;    
+}  
+th{
+  background-color:crimson;
+  color: #f2f2f2;
+  padding:3px;
+  border-radius: 9px;
+}
+ body{
+   letter-spacing: 2px;
+   line-height: 30px;
+   font-size: 25px;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 500;
+  background-image: url('https://images.pexels.com/photos/8699259/pexels-photo-8699259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+ }   
+ 
+ 
+/* Clear floats after the columns */    
+.row:after {    
+  content: "";    
+  display: table;    
+  clear: both;    
+}    
+    
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */    
+</style>    
+</head>    
+<body>    
+<h2 style="color: yellow;"><center>Course feedback form </center></h2> 
+<div class="container">    
+  <form>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="fname">First Name:</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="fname" name="firstname" placeholder="first name.." required pattern="[a-z, A-Z]*"><!--onmy characters-->    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="lname">Last Name:</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="lname" name="lastname" placeholder="last name.." required pattern="[a-z, A-Z]*"><!--onmy characters-->  
+      </div>    
+    </div>    
+    <div class="row">    
+        <div class="col-25">    
+          <label for="email">Mail Id:</label>    
+        </div>    
+        <div class="col-75">    
+          <input type="email" id="email" name="mailid" placeholder="Your mail id.." required="">   <!--email address with @ and .--> 
+        </div>    
+      </div>    
+      <div class="row">    
+        <div class="col-25">    
+          <label for="contact">Contact: </label>    
+        </div>    
+        <div class="col-75">    
+          <input type="text" id="contact" name="Contact " placeholder="Enter your 10 digit phone number.." pattern="\d{10}"><!--enter only 10 digits-->    
+        </div> 
+        </div>  
+    <div class="row">    
+      <div class="col-25">    
+        <label for="country">Country:</label>    
+      </div>    
+      <div class="col-75">    
+        <select id="country" name="country">    
+            <option value="none">Select Country</option>    
+          <option value="australia">Australia</option>    
+          <option value="canada">Canada</option>    
+          <option value="usa">USA</option>    
+          <option value="russia">Russia</option>    
+          <option value="japan">Japan</option>    
+          <option value="india">India</option>    
+          <option value="china">China</option>    
+        </select>    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="feed_back">Feedback:</label>    
+      </div>    
+      <div class="col-75">    
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" value="" maxlength="1000"></textarea>  <!--enter only 1000 sentences-->  
+        <div class="row">    
+      </div>    
+    </div>  
+    
+  <div>
+    <table>
+    <th>CREDENTIALS</th>
+    <th>EXCELLENT</th>
+    <th>GOOD</th>
+    <th>FAIR</th>
+    <th>POOR</th>
+    
+      <tr>
+        
+        <td>1. Punctuality </td>
+        <td><input type="radio" name="Punctuality"></td>
+        <td><input type="radio" name="Punctuality"></td>
+        <td><input type="radio" name="Punctuality"></td>
+        <td><input type="radio" name="Punctuality"></td>
+      
+        </tr>
+        </th>
+        <tr>
+          <td>2. Effictiveness</td>
+          <td><input type="radio"  name="Effictiveness"></td>
+          <td><input type="radio"  name="Effictiveness"></td>
+          <td><input type="radio"  name="Effictiveness"></td>
+          <td><input type="radio"  name="Effictiveness"></td>
+ 
+          </tr>
+          <tr>
+            <td>3. Professionalism</td>
+            <td><input type="radio" name="Professionalism"></td>
+            <td><input type="radio" name="Professionalism"></td>
+            <td><input type="radio" name="Professionalism"></td>
+            <td><input type="radio" name="Professionalism"></td>
+           
+            </tr>
+            <tr>
+              <td>4. Language delivery</td>
+              <td><input type="radio" name="Language delivery"></td>
+              <td><input type="radio" name="Language delivery"></td>
+              <td><input type="radio" name="Language delivery"></td>
+              <td><input type="radio" name="Language delivery"></td>
+            
+              </tr>
+              <tr>
+                <td>5. Overall service delivery</td>
+                <td><input type="radio" name="Overall service delivery"></td>
+                <td><input type="radio" name="Overall service delivery"></td>
+                <td><input type="radio" name="Overall service delivery"></td>
+                <td><input type="radio" name="Overall service delivery"></td>
+                
+                </tr>
+              </div>
+         
+  </table>  
+  <br><br>
+  General comments and suggestions for improving our services.
+  <br>
+  <input type="textarea" size="80">
+
+  <div class="row">    
+    <input type="submit" value="Submit"> 
+    <input type="button" value="Clear">
+  </div>
+  </form>   
+  </div> 
+</div>    
+    
+</body>    
+</html>    
